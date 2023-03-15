@@ -30,6 +30,22 @@ createApp(
                         }
                     ],
             }   
+        },
+        methods: {
+            next(){
+                
+                if(this.Activeimg == this.slides.lenght - 1){
+                    this.Activeimg = 0;
+                }else 
+                this.Activeimg++
+                
+            },
+            prev(){
+                if(this.Activeimg == 0){
+                    this.Activeimg = (this.slides.lenght - 1);
+                }else 
+                this.Activeimg--
+            }
         }
     }
 ).mount('#app')
